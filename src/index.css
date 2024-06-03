@@ -1,13 +1,11 @@
 :root {
   /* Global variables to be defined here */
   --color-white: #ffffff;
-  --color-blue1: #84b7fe;
-  --color-blue2: #3bb6fe;
-  --color-blue3: #6f85ff;
-  --color-blue4: #54c0ff;
-  --color-purple1: #a666fe;
-  --color-purple2: #9c7ffe;
-  --color-purple3: #9097ff;
+  --color-blue: #2aa8ff;
+  --color-gray: #abb6c7;
+  --color-black: #000000;
+  --color-black1: #102851;
+  --color-black2: #5c6169;
 }
 
 *,
