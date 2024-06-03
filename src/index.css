@@ -2,6 +2,7 @@
   /* Global variables to be defined here */
   --color-white: #ffffff;
   --color-blue: #2aa8ff;
+  --color-blue2: #1b3c74;
   --color-gray: #abb6c7;
   --color-black: #000000;
   --color-black1: #102851;
@@ -24,6 +25,7 @@ body {
     #e7f0ff 9.01%,
     rgba(232, 241, 255, 0.47) 89.11%
   );
+
   font-family: "Poppins", sans-serif;
 }
 body {
@@ -57,4 +59,16 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+button {
+  color: var(--color-white);
+  border: none;
+  background-color: var(--color-blue);
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+}
+
+button:hover {
+  cursor: pointer;
 }

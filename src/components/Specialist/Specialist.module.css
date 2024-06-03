@@ -1,0 +1,19 @@
+.wrapper {
+  background-color: var(--color-white);
+
+  padding: 1rem 10%;
+}
+
+.heading {
+  color: var(--color-blue2);
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 67px;
+  padding-top: 2rem;
+}
+
+@media screen and (max-width: 786px) {
+  .heading {
+    font-size: 32px;
+  }
+}

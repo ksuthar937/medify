@@ -1,0 +1,32 @@
+.wrapper {
+  margin: 1rem 2%;
+}
+
+.heading {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 67px;
+  color: var(--color-blue2);
+  padding: 1rem;
+}
+
+.cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 3rem;
+}
+.btn {
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 786px) {
+  .heading {
+    font-size: 32px;
+  }
+  .cards {
+    gap: 1rem;
+  }
+}

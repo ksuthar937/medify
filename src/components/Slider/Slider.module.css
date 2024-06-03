@@ -1,0 +1,9 @@
+.wrapper {
+  display: flex;
+  padding: 10rem 10% 4rem 10%;
+  background-color: var(--color-white);
+}
+
+.cardslide {
+  margin-bottom: 4rem;
+}
