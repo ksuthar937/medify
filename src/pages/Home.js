@@ -7,6 +7,7 @@ import Specialist from "../components/Specialist/Specialist";
 import PatientCaring from "../components/PatientCaring/PatientCaring";
 import NewsBlogs from "../components/News/NewsBlogs";
 import Summary from "../components/Summary/Summary";
+import FAQ from "../components/FAQ/FAQ";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <PatientCaring />
       <NewsBlogs />
       <Summary />
+      <FAQ />
     </>
   );
 };
