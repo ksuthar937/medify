@@ -73,4 +73,7 @@
     align-items: center;
     gap: 4rem;
   }
+  .questions {
+    gap: 4rem;
+  }
 }

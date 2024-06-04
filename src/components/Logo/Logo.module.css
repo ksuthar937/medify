@@ -1,0 +1,13 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--color-blue);
+}
+
+.logoImage {
+  background-color: var(--color-blue);
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+}

@@ -1,8 +1,7 @@
 import React from "react";
 
 import styles from "./Navbar.module.css";
-
-import Logo from "../../assets/Logo.svg";
+import Logo from "../Logo/Logo";
 
 const navItems = [
   "Find Doctors",
@@ -17,11 +16,8 @@ const navItems = [
 const Navbar = () => {
   return (
     <nav className={styles.wrapper}>
-      <div className={styles.logo}>
-        <div className={styles.logoImage}>
-          <img src={Logo} alt="logo" width={24} />
-        </div>
-        <h1>Medify</h1>
+      <div>
+        <Logo />
       </div>
       <div className={styles.tabs}>
         {navItems.map((item) => (
