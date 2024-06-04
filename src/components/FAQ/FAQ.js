@@ -14,7 +14,7 @@ const FAQ = () => {
     <section className={styles.wrapper}>
       <h3 className={styles.subHeading}>Get Your Answer</h3>
       <h1 className={styles.heading}>Frequently Asked Questions</h1>
-      <div>
+      <div className={styles.container}>
         <div className={styles.gridContainer}>
           <img
             src={FAQIamge}

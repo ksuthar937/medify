@@ -1,6 +1,7 @@
 :root {
   /* Global variables to be defined here */
   --color-white: #ffffff;
+  --color-white1: #f0f0f0;
   --color-blue: #2aa8ff;
   --color-blue2: #1b3c74;
   --color-gray: #abb6c7;
@@ -8,6 +9,7 @@
   --color-black: #000000;
   --color-black1: #102851;
   --color-black2: #5c6169;
+  --color-black3: #414146;
 }
 
 *,

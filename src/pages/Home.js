@@ -8,6 +8,7 @@ import PatientCaring from "../components/PatientCaring/PatientCaring";
 import NewsBlogs from "../components/News/NewsBlogs";
 import Summary from "../components/Summary/Summary";
 import FAQ from "../components/FAQ/FAQ";
+import Contact from "../components/Contact/Contact";
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <NewsBlogs />
       <Summary />
       <FAQ />
+      <Contact />
     </>
   );
 };
