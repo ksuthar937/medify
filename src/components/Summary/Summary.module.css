@@ -1,0 +1,54 @@
+.wrapper {
+  padding: 2rem 10%;
+}
+
+.subHeading {
+  color: var(--color-blue);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 27px;
+  padding-top: 2rem;
+}
+
+.heading {
+  color: var(--color-blue2);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 67px;
+}
+
+.desc {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 40.8px;
+  color: var(--color-gray1);
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.leftPart {
+  text-align: left;
+}
+
+@media screen and (min-width: 786px) {
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+  .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 585px;
+    height: 714px;
+    gap: 2rem;
+  }
+}
