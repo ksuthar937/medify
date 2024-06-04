@@ -1,13 +1,17 @@
 import React from "react";
 
 import styles from "./NewsBlogs.module.css";
+import NewsCard from "./NewsCard/NewsCard";
 
 const NewsBlogs = () => {
   return (
     <section className={styles.wrapper}>
-      <div>
-        <h3>Blog & News</h3>
-        <h1>Read Our Latest News </h1>
+      <h3 className={styles.subHeading}>Blog & News</h3>
+      <h1 className={styles.heading}>Read Our Latest News </h1>
+      <div className={styles.cards}>
+        <NewsCard />
+        <NewsCard />
+        <NewsCard />
       </div>
     </section>
   );

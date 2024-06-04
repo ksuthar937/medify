@@ -1,0 +1,46 @@
+.cardWrapper {
+  width: 363px;
+  height: 458px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0.1em 0.1em 0.5em rgba(110, 105, 105, 0.4);
+}
+
+.text {
+  text-align: left;
+  padding: 1rem;
+}
+
+.date {
+  color: var(--color-gray1);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 27px;
+}
+
+.heading {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  color: var(--color-blue2);
+}
+
+.user {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.avatar {
+  height: 32px;
+  width: 32px;
+  border-radius: 30px;
+}
+
+.name {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 27px;
+  color: var(--color-blue2);
+}
