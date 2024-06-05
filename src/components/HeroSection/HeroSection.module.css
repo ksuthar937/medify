@@ -1,7 +1,6 @@
 .wrapper {
   display: flex;
   margin: 1rem 10%;
-  /* margin-bottom: 15rem; */
 }
 
 .outline {
@@ -41,7 +40,13 @@
 
 @media screen and (max-width: 786px) {
   .wrapper {
+    margin: 1rem 5%;
     flex-direction: column;
+    align-items: center;
+  }
+  .wrapper img {
+    margin-top: 1rem;
+    width: 360px;
   }
   .header1 {
     font-size: 21px;

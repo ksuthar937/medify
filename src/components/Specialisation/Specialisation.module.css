@@ -1,5 +1,5 @@
 .wrapper {
-  margin: 1rem 2%;
+  margin: 1rem 15%;
 }
 
 .heading {
@@ -23,6 +23,9 @@
 }
 
 @media screen and (max-width: 786px) {
+  .wrapper {
+    margin: 1rem 1%;
+  }
   .heading {
     font-size: 32px;
   }

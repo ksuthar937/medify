@@ -1,5 +1,8 @@
 .wrapper {
-  margin: 2rem 10%;
+  margin: 2rem 5%;
+}
+
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,7 +15,7 @@
   gap: 2rem;
 }
 
-.tabs p {
+.wrapper p {
   color: var(--color-black1);
 }
 
@@ -42,7 +45,34 @@
   color: var(--color-blue2);
 }
 
+.menuItem {
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.menuItem ul {
+  color: var(--color-black1);
+  list-style-type: none;
+  padding: 0;
+}
+
+.menuItem li {
+  color: var(--color-blue);
+  background-color: var(--color-white);
+  margin: 0.4rem 0rem;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+  width: 12rem;
+}
+
+.menuItem li {
+  cursor: pointer;
+}
+
 @media screen and (min-width: 1224px) {
+  .wrapper {
+    margin: 2rem 10%;
+  }
   .desktopView {
     display: block;
   }

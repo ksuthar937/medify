@@ -37,7 +37,7 @@ const Data = [
 
 const SearchBox = () => {
   return (
-    <section className={styles.wrapper}>
+    <section className={styles.layout}>
       <div className={styles.userInputs}>
         <input type="text" placeholder="State" />
         <input type="text" placeholder="City" />

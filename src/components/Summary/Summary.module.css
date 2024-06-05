@@ -1,5 +1,5 @@
 .wrapper {
-  padding: 2rem 10%;
+  margin: 2rem 5%;
 }
 
 .subHeading {
@@ -43,6 +43,7 @@
     justify-content: center;
     align-items: center;
     gap: 4rem;
+    margin: 2rem 10%;
   }
   .cards {
     flex-direction: row;
