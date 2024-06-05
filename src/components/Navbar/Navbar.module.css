@@ -27,3 +27,27 @@
   cursor: pointer;
   color: var(--color-black2);
 }
+
+.desktopView {
+  display: none;
+}
+
+.mobilView {
+  display: block;
+  color: var(--color-blue);
+}
+
+.mobilView:hover {
+  cursor: pointer;
+  color: var(--color-blue2);
+}
+
+@media screen and (min-width: 1224px) {
+  .desktopView {
+    display: block;
+  }
+
+  .mobilView {
+    display: none;
+  }
+}

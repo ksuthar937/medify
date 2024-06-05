@@ -51,4 +51,7 @@
     height: 714px;
     gap: 2rem;
   }
+  .heading {
+    font-size: 48px;
+  }
 }

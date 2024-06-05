@@ -12,7 +12,7 @@ import arrowImage from "../../assets/Vector.svg";
 const Contact = () => {
   return (
     <div className={styles.wrapper}>
-      <img src={mobileImage} alt="mobile app" width={600} />
+      <img src={mobileImage} alt="mobile app" width={450} />
       <img
         className={styles.arrow}
         src={arrowImage}

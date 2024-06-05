@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { Pagination } from "swiper/modules";
 
@@ -49,13 +49,33 @@ const MedicalSpecialist = [
 ];
 
 const Specialist = () => {
+  const [screenSize, setScreenSize] = useState(null);
+
+  const updateScreenSize = () => {
+    if (window.innerWidth < 768) {
+      setScreenSize(1);
+    } else if (window.innerWidth < 1024) {
+      setScreenSize(2);
+    } else {
+      setScreenSize(3);
+    }
+  };
+
+  useEffect(() => {
+    updateScreenSize();
+    window.addEventListener("resize", updateScreenSize);
+    return () => {
+      window.removeEventListener("resize", updateScreenSize);
+    };
+  }, []);
+
   return (
     <div className={styles.wrapper}>
       <h1 className={styles.heading}>Our Medical Specialist</h1>
       <Swiper
         modules={[Pagination]}
         spaceBetween={10}
-        slidesPerView={1}
+        slidesPerView={screenSize}
         pagination={{ clickable: true }}
       >
         {MedicalSpecialist.map((specialist) => {

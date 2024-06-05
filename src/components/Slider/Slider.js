@@ -12,14 +12,35 @@ import styles from "./Slider.module.css";
 
 import Image1 from "../../assets/slider-image-1.png";
 import Image2 from "../../assets/slider-image-2.png";
+import { useEffect, useState } from "react";
 
 const Slider = () => {
+  const [screenSize, setScreenSize] = useState(null);
+
+  const updateScreenSize = () => {
+    if (window.innerWidth < 768) {
+      setScreenSize(1);
+    } else if (window.innerWidth < 1024) {
+      setScreenSize(2);
+    } else {
+      setScreenSize(3);
+    }
+  };
+
+  useEffect(() => {
+    updateScreenSize();
+    window.addEventListener("resize", updateScreenSize);
+    return () => {
+      window.removeEventListener("resize", updateScreenSize);
+    };
+  }, []);
+
   return (
     <div className={styles.wrapper}>
       <Swiper
         modules={[Pagination]}
         spaceBetween={30}
-        slidesPerView={1}
+        slidesPerView={screenSize}
         pagination={{ clickable: true }}
       >
         <SwiperSlide>
@@ -29,16 +50,16 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img src={Image2} alt="slider" width={400} />
-        </SwiperSlide>{" "}
+        </SwiperSlide>
         <SwiperSlide>
           <img src={Image1} alt="slider" width={400} />
-        </SwiperSlide>{" "}
+        </SwiperSlide>
         <SwiperSlide>
           <img src={Image2} alt="slider" width={400} />
-        </SwiperSlide>{" "}
+        </SwiperSlide>
         <SwiperSlide>
           <img src={Image1} alt="slider" width={400} />
-        </SwiperSlide>{" "}
+        </SwiperSlide>
         <SwiperSlide>
           <img src={Image2} alt="slider" width={400} />
         </SwiperSlide>
