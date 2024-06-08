@@ -1,8 +1,16 @@
 .wrapper {
-  background-color: var(--color-white);
   margin: 1rem;
+  background-color: var(--color-white);
   border-radius: 0.5rem;
   padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.detailsWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,6 +23,7 @@
   font-size: 20px;
   font-weight: 600;
   line-height: 28px;
+  text-transform: capitalize;
 }
 
 .place {
@@ -22,6 +31,7 @@
   font-size: 14px;
   font-weight: 700;
   line-height: 20px;
+  text-transform: capitalize;
 }
 
 .type {
@@ -98,16 +108,18 @@
   gap: 0.4rem;
 }
 
-@media screen and (min-width: 786px) {
-  .wrapper {
+@media screen and (min-width: 1024px) {
+  .detailsWrapper {
     flex-direction: row;
-    width: fit-content;
-    /* padding-top: 4rem;
-    height: 300px; */
+    /* width: fit-content; */
   }
 
-  .wrapper img {
+  .detailsWrapper > img {
     margin-top: -6rem;
+  }
+
+  .type {
+    text-align: left;
   }
 
   .details {
@@ -116,5 +128,9 @@
 
   .booking {
     margin-top: 6rem;
+    width: 14rem;
+  }
+  .booking button {
+    width: fit-content;
   }
 }

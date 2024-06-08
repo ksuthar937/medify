@@ -35,24 +35,47 @@ const Data = [
   },
 ];
 
-const SearchBox = () => {
+const SearchBox = ({
+  states,
+  cities,
+  handleStates,
+  handleCity,
+  selectedCity,
+  handleSubmit,
+}) => {
   return (
     <section className={styles.layout}>
-      <div className={styles.userInputs}>
-        <input type="text" placeholder="State" />
-        <input type="text" placeholder="City" />
+      <form onSubmit={handleSubmit} className={styles.userInputs}>
+        <select onChange={handleStates} required>
+          <option value="">Select State</option>
+          {states.map((state) => (
+            <option key={state} value={state}>
+              {state}
+            </option>
+          ))}
+        </select>
+        {cities.length > 0 ? (
+          <select onChange={handleCity} required>
+            <option value="">Select City</option>
+            {cities.map((city) => (
+              <option key={city} value={city}>
+                {city}
+              </option>
+            ))}
+          </select>
+        ) : null}
         <button className={styles.btn}>
           <span>
             <IoSearchOutline />
           </span>
           Search
         </button>
-      </div>
+      </form>
       <div className={styles.selection}>
         <p>You may be looking for</p>
         <div className={styles.cards}>
-          {Data.map((item) => (
-            <ItemCard name={item.name} logo={item.logo} />
+          {Data.map((item, index) => (
+            <ItemCard key={index} name={item.name} logo={item.logo} />
           ))}
         </div>
       </div>
