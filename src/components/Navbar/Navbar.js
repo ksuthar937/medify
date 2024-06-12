@@ -5,6 +5,7 @@ import Logo from "../Logo/Logo";
 
 import { TiThMenu } from "react-icons/ti";
 import { RxCross1 } from "react-icons/rx";
+import { Link } from "react-router-dom";
 
 const navItems = [
   "Find Doctors",
@@ -26,8 +27,10 @@ const Navbar = () => {
   return (
     <section className={styles.wrapper}>
       <nav className={styles.nav}>
-        <div>
-          <Logo />
+        <div className={styles.logo}>
+          <Link  to={"/"}>
+            <Logo />
+          </Link>
         </div>
         <div className={styles.desktopView}>
           <div className={styles.tabs}>

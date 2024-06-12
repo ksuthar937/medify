@@ -6,18 +6,30 @@ import advertiseImage from "../assets/sensodyne_dweb.png.png";
 
 import styles from "./Search.module.css";
 import { useHospital } from "../context/HospitalContext";
+import Loader from "../components/Loader/Loader";
 
 const Search = () => {
-  const { hospitals } = useHospital();
+  const { hospitals, isLoading } = useHospital();
   return (
     <>
       <div className={styles.wrapper}>
-        <div className={styles.advertiseBoard}>
-          <img src={advertiseImage} alt="sensodyne add" />
-        </div>
-        {hospitals.map((hospital, index) => (
-          <HospitalCard key={index} data={hospital} />
-        ))}
+        {isLoading ? (
+          <div className={styles.loader}>
+            <Loader />
+            <p>Searching..</p>
+          </div>
+        ) : (
+          <>
+            <div className={styles.advertiseBoard}>
+              <img src={advertiseImage} alt="sensodyne add" />
+            </div>
+            <div className={styles.hospitalCards}>
+              {hospitals.map((hospital, index) => (
+                <HospitalCard key={index} data={hospital} />
+              ))}
+            </div>
+          </>
+        )}
       </div>
       <FAQ />
     </>

@@ -71,6 +71,7 @@ const Home = () => {
   };
 
   const fetchData = async () => {
+    dispatch({ type: "search/loading" });
     try {
       const response = await axios.get(
         `${API_URL}/data?state=${selectedState}&city=${selectedCity}`

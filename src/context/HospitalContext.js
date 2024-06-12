@@ -4,23 +4,28 @@ const HospitalContext = createContext();
 
 const initialState = {
   hospitals: [],
+  isLoading: false,
 };
 
 function reducer(state, action) {
   switch (action.type) {
+    case "search/loading":
+      return { ...state, isLoading: true };
     case "search/hospitals":
-      console.log(action.payload);
-      return { ...state, hospitals: action.payload };
+      return { ...state, hospitals: action.payload, isLoading: false };
     default:
       throw new Error("action type is unknown!");
   }
 }
 
 function HospitalProvider({ children }) {
-  const [{ hospitals }, dispatch] = useReducer(reducer, initialState);
+  const [{ hospitals, isLoading }, dispatch] = useReducer(
+    reducer,
+    initialState
+  );
 
   return (
-    <HospitalContext.Provider value={{ hospitals, dispatch }}>
+    <HospitalContext.Provider value={{ hospitals, isLoading, dispatch }}>
       {children}
     </HospitalContext.Provider>
   );

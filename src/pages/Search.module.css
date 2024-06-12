@@ -7,6 +7,12 @@
   margin: 1rem 10%;
 }
 
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media screen and (min-width: 786px) {
   .wrapper {
     margin: 1rem 10%;
@@ -18,5 +24,9 @@
   .advertiseBoard img {
     width: 360px;
     padding: 1rem 1rem 2rem 1rem;
+  }
+  .hospitalCards {
+    display: flex;
+    flex-direction: column;
   }
 }
