@@ -5,19 +5,42 @@ import Logo from "../Logo/Logo";
 
 import { TiThMenu } from "react-icons/ti";
 import { RxCross1 } from "react-icons/rx";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
-  "Find Doctors",
-  "Hospitals",
-  "Medicines",
-  "Surgeries",
-  "Software for Provider",
-  "Facilities",
-  "My Bookings",
+  {
+    name: "Find Doctors",
+    path: "/search",
+  },
+  {
+    name: "Hospitals",
+    path: "/search",
+  },
+  {
+    name: "Medicines",
+    path: "/search",
+  },
+  {
+    name: "Surgeries",
+    path: "/search",
+  },
+  {
+    name: "Software for Provider",
+    path: "/search",
+  },
+  {
+    name: "Facilities",
+    path: "/search",
+  },
+  {
+    name: "My Bookings",
+    path: "/bookings",
+  },
 ];
 
 const Navbar = () => {
+  const { pathname } = useLocation();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenu = () => {
@@ -25,17 +48,21 @@ const Navbar = () => {
   };
 
   return (
-    <section className={styles.wrapper}>
+    <section
+      className={pathname === "/" ? styles.wrapper : styles.whiteWrapper}
+    >
       <nav className={styles.nav}>
         <div className={styles.logo}>
-          <Link  to={"/"}>
+          <Link to={"/"}>
             <Logo />
           </Link>
         </div>
         <div className={styles.desktopView}>
           <div className={styles.tabs}>
             {navItems.map((item) => (
-              <p key={item}>{item}</p>
+              <Link key={item.name} to={item.path}>
+                {item.name}
+              </Link>
             ))}
           </div>
         </div>
@@ -47,7 +74,9 @@ const Navbar = () => {
         <div className={styles.menuItem}>
           <ul className={styles.mobilView}>
             {navItems.map((item) => (
-              <li key={item}>{item}</li>
+              <Link key={item.name} to={item.path}>
+                <li>{item.name}</li>
+              </Link>
             ))}
           </ul>
         </div>

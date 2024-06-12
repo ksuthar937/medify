@@ -1,0 +1,163 @@
+.wrapper {
+  margin: 1rem;
+  background-color: var(--color-white);
+  border-radius: 0.5rem;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.detailsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.heading {
+  color: var(--color-blue);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  text-transform: capitalize;
+}
+
+.place {
+  color: var(--color-black3);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: capitalize;
+}
+
+.type {
+  color: var(--color-black3);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.fee {
+  color: var(--color-black3);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.fee .text1 {
+  color: var(--color-green);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.fee .text2 {
+  color: var(--color-black4);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: line-through;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.text3 {
+  color: var(--color-green);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 0.5rem;
+}
+
+.line {
+  width: 100%;
+  border-top: 1px dotted rgba(232, 232, 240, 1);
+  margin: 1rem 0rem;
+}
+
+.likes {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  background-color: var(--color-green);
+  height: 23px;
+  width: 45px;
+  border-radius: 3px;
+  padding: 4.5px 8px 4.5px 10px;
+}
+
+.likesCount {
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  opacity: 50%;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.timing {
+  display: flex;
+  gap: 1rem;
+}
+
+.time {
+  border: 1px solid var(--color-blue);
+  border-radius: 3px;
+  width: fit-content;
+  padding: 0.3rem 0.7rem;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--color-blue);
+}
+
+.date {
+  border: 1px solid var(--color-green);
+  border-radius: 3px;
+  width: fit-content;
+  padding: 0.3rem 0.7rem;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--color-green);
+}
+
+@media screen and (min-width: 1024px) {
+  .detailsWrapper {
+    flex-direction: row;
+    /* width: fit-content; */
+  }
+
+  .detailsWrapper > img {
+    margin-top: -6rem;
+  }
+
+  .type {
+    text-align: left;
+  }
+
+  .details {
+    align-items: flex-start;
+  }
+
+  .booking {
+    margin-top: 6rem;
+    width: 14rem;
+  }
+  .booking button {
+    width: fit-content;
+  }
+}

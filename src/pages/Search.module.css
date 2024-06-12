@@ -13,6 +13,26 @@
   justify-content: center;
 }
 
+.searchBoxWrapper {
+  padding: 3rem 2rem;
+  margin: 2rem 4rem;
+  background-color: var(--color-white);
+  border-radius: 1rem;
+  box-shadow: 0.3em 0.3em 2em rgba(110, 105, 105, 0.4);
+}
+
+.bannerLine {
+  text-align: center;
+  margin: 0 5%;
+}
+
+.bannerLine p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--color-black4);
+}
+
 @media screen and (min-width: 786px) {
   .wrapper {
     margin: 1rem 10%;
@@ -28,5 +48,9 @@
   .hospitalCards {
     display: flex;
     flex-direction: column;
+  }
+  .searchBoxWrapper {
+    margin: 2rem 16%;
+    padding: 3rem 2rem;
   }
 }
